@@ -12,11 +12,11 @@ public class MCTest {
                 new MCQuestion(
                         "Welche der folgenden Aussagen treffen auf Objektmethoden bzw. Klassenmethoden zu?",
 
-                        new Choice(false, "In Objektmethoden bezeichnet  this  das aktuelle Objekt."),
+                        new Choice(true, "In Objektmethoden bezeichnet  this  das aktuelle Objekt."),
                         new Choice(false, "Objektmethoden haben Zugriff auf Objekt- und Klassenvariablen."),
-                        new Choice(false, "Klassenmethoden haben keinen Zugriff auf Objektvariablen."),
-                        new Choice(false, "In Klassenmethoden darf  this  nicht vorkommen."),
-                        new Choice(false, "Jede nicht als  static  deklarierte Methode ist eine Objektmethode.")
+                        new Choice(true, "Klassenmethoden haben keinen Zugriff auf Objektvariablen."),
+                        new Choice(true, "In Klassenmethoden darf  this  nicht vorkommen."),
+                        new Choice(true, "Jede nicht als  static  deklarierte Methode ist eine Objektmethode.")
                 ),
 
                 new MCQuestion(
@@ -27,7 +27,7 @@ public class MCTest {
                         new Choice(false, "s.push(1); s.push(2); s.push(3);"),
                         new Choice(false, "s.push(1); s.push(2); s.push(s.peek());"),
                         new Choice(false, "s.push(1); s.push(s.peek()); s.push(2);"),
-                        new Choice(false, "s.push(1); s.push(2); s.push(s.pop());")
+                        new Choice(true, "s.push(1); s.push(2); s.push(s.pop());")
                 ),
 
                 new MCQuestion(
@@ -36,20 +36,20 @@ public class MCTest {
                         "Welche der folgenden Anweisungs-Sequenzen entfernen den direkten Nachfolger von x\n" +
                         "aus einer Liste, ändern sonst aber nichts?",
 
-                        new Choice(false, "x.next = x.next.next;"),
+                        new Choice(true, "x.next = x.next.next;"),
                         new Choice(false, "x.next.next = x.next.next.next;"),
                         new Choice(false, "x.next.next = x.next;"),
-                        new Choice(false, "Node n = x.next.next; x.next = n;"),
+                        new Choice(true, "Node n = x.next.next; x.next = n;"),
                         new Choice(false, "Node d = x.next; d = d.next;")
                 ),
 
                 new MCQuestion(
                         "Welche der folgenden Aussagen stimmen in Bezug auf rekursive Datenstrukturen?",
 
-                        new Choice(false, "Doppelt verkettete Listen sind in beide Richtungen traversierbar."),
-                        new Choice(false, "Zur Fundierung wird meist  null  verwendet."),
+                        new Choice(true, "Doppelt verkettete Listen sind in beide Richtungen traversierbar."),
+                        new Choice(true, "Zur Fundierung wird meist  null  verwendet."),
                         new Choice(false, "Auch zyklische Datenstrukturen müssen fundiert sein."),
-                        new Choice(false, "Eine Datenstruktur ist rekursiv wenn ihre Methoden rekursiv sind."),
+                        new Choice(true, "Eine Datenstruktur ist rekursiv wenn ihre Methoden rekursiv sind."),
                         new Choice(false, "Schleifen erlauben kein vollständiges Traversieren.")
                 ),
 
@@ -59,7 +59,7 @@ public class MCTest {
                         new Choice(false, "Objektmethoden werden immer dynamisch gebunden."),
                         new Choice(false, "Ein dynamischer Typ ist stets eine Klasse, kein Interface."),
                         new Choice(false, "Dynamisches Binden ist zusammen mit Untertypbeziehungen nötig."),
-                        new Choice(false, "Objektmethoden werden in deklarierten Typen von Objekten ausgeführt."),
+                        new Choice(true, "Objektmethoden werden in deklarierten Typen von Objekten ausgeführt."),
                         new Choice(false, "'final' Methoden werden immer dynamisch gebunden.")
                 )
         );

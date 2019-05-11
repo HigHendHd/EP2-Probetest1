@@ -3,15 +3,28 @@
 public class Monom {
 
     //TODO: declare variables
+    private int coeff, degree;
 
     // A constructor with the coefficient 'coeff' and the 'degree' of this monomial.
     public Monom(int coeff, int degree) {
         // TODO: implement this constructor
+        this.coeff = coeff;
+        this.degree = degree;
     }
 
     // Copy-constructor: uses 'coeff' and 'degree' of 'm' to initialize this monomial.
     public Monom(Monom m) {
         // TODO: implement this constructor
+        coeff = m.coeff;
+        degree = m.degree;
+    }
+
+    public int getCoeff() {
+        return coeff;
+    }
+
+    public int getDegree() {
+        return degree;
     }
 
     // Adds the monomial 'm' to this monomial, if both monomials have the same degree.
@@ -21,26 +34,30 @@ public class Monom {
     // returns 'false'.
     public boolean combine(Monom m) {
         // TODO: implement this method
+        if (degree == m.degree) {
+            coeff += m.coeff;
+            return true;
+        }
         return false;
     }
 
     // Returns 'true' if 'm' has a higher degree than 'this', and 'false' otherwise.
     public boolean lowerDegreeThan(Monom m) {
         // TODO: implement this method
-        return false;
+        return m.degree > degree;
     }
 
     // Returns the value of the monomial for a specified value of 'x'
     public int eval(int x) {
         // TODO: implement this method
-        return 0;
+        return coeff * (int) Math.pow(x, degree);
     }
 
 
     // Returns a representation in mathematical notation, e.g. of the form "5*x^2".
     public String toString() {
         // TODO: implement this method
-        return "";
+        return coeff + "*x^" + degree;
     }
 
 
