@@ -33,7 +33,10 @@ public class Polynom {
         // TODO: implement this method
         if (coeff == 0) return;
 
-        Monom addMonom = new Monom(coeff, degree);
+        add(new Monom(coeff, degree));
+    }
+
+    private void add(Monom addMonom) {
         if (storedMonom == null) {
             storedMonom = addMonom;
             return;
@@ -43,15 +46,11 @@ public class Polynom {
 
         if (storedMonom.lowerDegreeThan(addMonom)) {
             if (right == null) right = new Polynom();
-            right.add(coeff, degree);
+            right.add(addMonom);
         } else {
             if (left == null) left = new Polynom();
-            left.add(coeff, degree);
+            left.add(addMonom);
         }
-    }
-
-    private void add(Monom m) {
-        add(m.getCoeff(), m.getDegree());
     }
 
     // Adds all monomials of 'p' to this polynomial.

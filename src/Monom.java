@@ -19,14 +19,6 @@ public class Monom {
         degree = m.degree;
     }
 
-    public int getCoeff() {
-        return coeff;
-    }
-
-    public int getDegree() {
-        return degree;
-    }
-
     // Adds the monomial 'm' to this monomial, if both monomials have the same degree.
     // In this case this monomial's coefficient is replaced by the sum of this monomial's
     // coefficient and the coefficient of 'm'. In this case the method returns 'true'.
